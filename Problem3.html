@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PROBLEM 3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .product-page {
+      font-size: 20px;
+      padding-top: 50px;
+      padding-left: 50px;
+
+    }
+
+    .product-image {
+      flex: 0;
+      padding-left: 350px;
+      padding-top: 200px;
+      padding-right: px;
+    }
+
+    .product-details {
+      flex: 1;
+      padding-left: 1px;
+      padding-right: 300px;
+      padding-top: 10px;
+    }
+
+    .product-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+
+
+    .product-price {
+      font-size: 18px;
+      margin-bottom: 10px;
+
+    }
+
+    .product-discount {
+      font-size: 14px;
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    .discount {
+      color: #8bc34a;
+      font-size: 14px;
+    }
+
+    .op {
+      color: #999;
+    }
+
+
+    .product-description {
+      margin-bottom: 10px;
+
+    }
+
+    .product-details-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product-details-list li {
+      margin-bottom: 5px;
+    }
+
+    .size-options {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .size-option {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .size-option label {
+      margin-left: 5px;
+    }
+
+    .size-option .circle {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 50%;
+      transition: background-color 0.3s;
+      background-color: white;
+      box-sizing: border-box;
+      margin-right: 5px;
+    }
+
+    .size-option input[type="radio"] {
+      display: none;
+    }
+
+    .size-option input[type="radio"]:checked+label .circle {
+      border: 4px solid blue;
+    }
+
+    .buy-now-button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .add-to-cart-button {
+      padding: 10px 20px;
+      background-color: whITE;
+      color: rgb(2, 2, 2);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .option {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .circle {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      margin-right: 5px;
+      transition: outline-color 0.3s;
+    }
+
+    .circle.selected {
+      outline: 2px solid blue;
+      outline-offset: -2px;
+    }
+
+    .rating {
+      font-size: 20px;
+      color: black;
+      display: inline-flex;
+      align-items: center;
+    }
+
+
+
+    .shirts {
+      color: #999;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="product-image">
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/06/57/isolated-t-shirt-1852114_1280.png" alt="Product Image"
+        width="300" height="400">
+    </div>
+    <div class="product-details">
+
+      <br />
+      <div class="product-page">Product Page</div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="product-title">Green Cotton T-shirt</div>
+      <div class="shirts">Shirts</div>
+      <br />
+      <div class="product-rating">
+        <span class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+
+        </span>
+      </div>
+      <br />
+      <div class="product-price"><b></b> Rs.400 <del><span class="op">Rs.800</span></del> <span class="discount">50%
+          off</span></div>
+      <div class="product-description">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Velit hic culpa neque fugiat maiores officiia commodi
+        temporibus possimus, odit architecho, facere nihil dolores provident earum tenetur! Sequi architecto maiores
+        dolores iste veniam. Dolor rerum officiis perspiciatis ab delectus. Obcaecati, liquid.
+      </div>
+      <ul class="product-details-list">
+        <br />
+        <li>
+          <b>Color</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Green</li>
+        <li><b>Availability</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 in stock</li>
+        <br />
+
+
+        <ul class="product-details-list">
+          <li>
+            <ul class="size-options">
+              <li class="size-option"><b>Select Size
+                  :</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+                <input type="radio" name="size" id="size-small">
+                <label for="size-small"><span class="circle"></span> Small</label>
+              </li>
+              <li class="size-option">
+                <input type="radio" name="size" id="size-medium">
+                <label for="size-medium"><span class="circle"></span> Medium</label>
+              </li>
+              <li class="size-option">
+                <input type="radio" name="size" id="size-large">
+                <label for="size-large"><span class="circle"></span> Large</label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <b>Quantity:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+        </li>
+      </ul>
+      <br />
+
+
+      <button class="buy-now-button">Buy Now</button>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+  </div>
+</body>
+
+</html>
